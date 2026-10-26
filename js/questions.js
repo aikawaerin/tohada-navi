@@ -1,0 +1,106 @@
+// 質問データ。文言・選択肢の追加や修正はこのファイルだけで行う。
+// 選択肢の id は rules.js の配点と対応している（id を変えるときは両方を直す）。
+export const QUESTIONS = [
+  {
+    id: "q1",
+    type: "multi",
+    max: 2,
+    title: "今、特に気になることは？",
+    note: "複数選択できます（最大2つ）",
+    quoteLabel: "特に気になること",
+    options: [
+      { id: "sun", label: "日焼けによる肌印象の変化" },
+      { id: "dull", label: "乾燥によるくすみ印象" },
+      { id: "texture", label: "肌のごわつきやキメ" },
+      { id: "irritation", label: "ケア中の刺激感" },
+      { id: "unsure", label: "どのケアを優先するか分からない" },
+    ],
+  },
+  {
+    id: "q2",
+    type: "single",
+    title: "洗顔後、肌のつっぱりを感じますか？",
+    quoteLabel: "洗顔後のつっぱり",
+    options: [
+      { id: "often", label: "よく感じる" },
+      { id: "sometimes", label: "ときどき感じる" },
+      { id: "rarely", label: "ほとんど感じない" },
+      { id: "unknown", label: "分からない" },
+    ],
+  },
+  {
+    id: "q3",
+    type: "single",
+    title: "スキンケアで、しみたり刺激を感じたりすることは？",
+    quoteLabel: "スキンケア中の刺激",
+    options: [
+      { id: "often", label: "よくある" },
+      { id: "sometimes", label: "ときどきある" },
+      { id: "rarely", label: "ほとんどない" },
+      { id: "unknown", label: "分からない" },
+    ],
+  },
+  {
+    id: "q4",
+    type: "single",
+    title: "日中、屋外で過ごす機会は？",
+    quoteLabel: "日中に屋外で過ごす機会",
+    options: [
+      { id: "daily", label: "ほぼ毎日ある" },
+      { id: "weekly", label: "週に数回ある" },
+      { id: "rarely", label: "あまりない" },
+      { id: "varies", label: "日によって大きく違う" },
+    ],
+  },
+  {
+    id: "q5",
+    type: "single",
+    title: "日焼け止めや帽子、日傘などの対策は？",
+    quoteLabel: "紫外線対策",
+    options: [
+      { id: "situational", label: "状況に合わせて行っている" },
+      { id: "outing", label: "外出するときだけ行っている" },
+      { id: "forget", label: "忘れることが多い" },
+      { id: "unsure", label: "何をすればよいか分からない" },
+    ],
+  },
+  {
+    id: "q6",
+    type: "single",
+    title: "保湿ケアはどのくらい行っていますか？",
+    quoteLabel: "保湿ケアの頻度",
+    options: [
+      { id: "both", label: "毎日、朝と夜" },
+      { id: "once", label: "毎日、どちらか一方" },
+      { id: "whenDry", label: "乾燥が気になるときだけ" },
+      { id: "rarely", label: "あまり行っていない" },
+    ],
+  },
+  {
+    id: "q7",
+    type: "multi",
+    exclusive: "none",
+    title: "最近のケアに当てはまることは？",
+    note: "複数選択できます（「特に当てはまらない」は他と同時に選べません）",
+    quoteLabel: "最近のケア",
+    options: [
+      { id: "newItems", label: "新しいアイテムを一度に複数取り入れた" },
+      { id: "scrub", label: "スクラブや角質ケアを頻繁に行っている" },
+      { id: "gentle", label: "こすらないように意識している" },
+      { id: "simple", label: "シンプルなケアを続けている" },
+      { id: "none", label: "特に当てはまらない" },
+    ],
+  },
+  {
+    id: "q8",
+    type: "single",
+    title: "これからのケアで大切にしたいことは？",
+    quoteLabel: "これからのケアで大切にしたいこと",
+    options: [
+      { id: "easy", label: "手軽に続けたい" },
+      { id: "gentle", label: "刺激への配慮を優先したい" },
+      { id: "basics", label: "基本から見直したい" },
+      { id: "consult", label: "相談して選びたい" },
+    ],
+  },
+];
